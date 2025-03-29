@@ -1,5 +1,5 @@
 import { Marquee } from "@/components/utility/marquee";
-import { firstRow, reviews, secondRow } from "@/constants";
+import { reviews } from "@/constants";
 import { cn } from "@/lib/utils";
 
 
