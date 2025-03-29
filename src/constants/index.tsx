@@ -1,4 +1,5 @@
 
+import { Globe } from "@/components/magicui/globe";
 import SimpleChat from "@/features/bento/ai-chat";
 import { BookAudio, BotIcon, CalendarIcon, Users2 } from "lucide-react";
 // import { MarqueeDemo } from "./components/magicui/demo";
@@ -25,8 +26,9 @@ import { BookAudio, BotIcon, CalendarIcon, Users2 } from "lucide-react";
       href: "/",
       cta: "Learn more",
       background: (
-        <div className="pt-5 right-10 top-10">
+        <div className="  right-2 top-10">
           {/* <MarqueeDemo />{" "} */}
+          <Globe  />
         </div>
       ),
       className: "col-span-2 row-span-1",
