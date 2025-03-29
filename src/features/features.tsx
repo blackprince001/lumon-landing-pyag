@@ -6,7 +6,7 @@ export default function Features() {
   return (
     <div className="w-full border-t-2 sm:grid  sm:grid-cols-[1fr_minmax(0,900px)_1fr] border-t-neutral-800">
       <DiagonalPattern side="left" />
-      <div className=" py-16">
+      <div className=" pt-16">
         <div className="w-full flex flex-col justify-center items-center gap-6 py-14">
           <p className="text-2xl text-center sm:text-4xl text-white">
             Three Powerful Modules in One Platform

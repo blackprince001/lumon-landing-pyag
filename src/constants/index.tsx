@@ -1,6 +1,7 @@
 
-import { Globe } from "@/components/magicui/globe";
+import { Globe } from "@/components/utility/globe";
 import SimpleChat from "@/features/bento/ai-chat";
+import {LearnAndGrowCards } from "@/features/bento/book-marquee";
 import { BookAudio, BotIcon, CalendarIcon, Users2 } from "lucide-react";
 // import { MarqueeDemo } from "./components/magicui/demo";
 // import { OrbitingCirclesDemo } from "./test";
@@ -40,9 +41,9 @@ import { BookAudio, BotIcon, CalendarIcon, Users2 } from "lucide-react";
       href: "/",
       cta: "Learn more",
       background: (
-        <div className="pt-5 right-10 top-10">
-          {/* <OrbitingCirclesDemo />{" "} */}
-        </div>
+        <div className="pt-8 ">
+        <LearnAndGrowCards/>
+      </div>
       ),
       className: "col-span-2 row-span-1 pb-3",
     },
@@ -60,3 +61,47 @@ import { BookAudio, BotIcon, CalendarIcon, Users2 } from "lucide-react";
       className: "col-span-2 row-span-1 pb-3",
     },
   ];
+
+ export const reviews = [
+    {
+      name: "Kwame",
+      username: "@kwame",
+      body: "Starting with just Ghc 5 felt like a small step, but the guided investment plans made it easy to grow my portfolio.",
+      img: "https://avatar.vercel.sh/kwame",
+    },
+    {
+      name: "Ama",
+      username: "@ama",
+      body: "The personalized financial education helped me understand risk and returns. Now, I invest with confidence!",
+      img: "https://avatar.vercel.sh/ama",
+    },
+    {
+      name: "Kojo",
+      username: "@kojo",
+      body: "I love how I can track my progress and adjust my strategy anytime. Investing has never been this simple.",
+      img: "https://avatar.vercel.sh/kojo",
+    },
+    {
+      name: "Abena",
+      username: "@abena",
+      body: "Diversified portfolios tailored to my goals? Yes, please! This has been a game-changer for my finances.",
+      img: "https://avatar.vercel.sh/abena",
+    },
+    {
+      name: "Yaw",
+      username: "@yaw",
+      body: "Learning about investments while actually investing is the best part. The ‘Learn & Grow’ approach is brilliant.",
+      img: "https://avatar.vercel.sh/yaw",
+    },
+    {
+      name: "Nana",
+      username: "@nana",
+      body: "I always thought investing was complicated, but this platform makes it easy for beginners like me.",
+      img: "https://avatar.vercel.sh/nana",
+    },
+  ];
+  
+
+  
+export const firstRow = reviews.slice(0, reviews.length / 2);
+export const secondRow = reviews.slice(reviews.length / 2);
