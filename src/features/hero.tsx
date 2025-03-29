@@ -42,25 +42,25 @@ export default function Hero() {
           </div>
         </div>
         <NeonGradientCard
-                  className="mt-16 sm:mt-24 w-fit max-w-full mx-auto "
-                  borderSize={0}
-                  padding={0}
-                  neonColors={{
-                    firstColor: "#dcfce7",
-                    secondColor: " #22c55e ",
-                  }}
-                >
-        <div className="relative w-fit h-fit max-w-full text-green-100">
-          <img
-            alt="App screenshot"
-            src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
-            width={2432}
-            height={1442}
-            className="rounded-md bg-white/5 ring-1 shadow-2xl ring-white/10 max-w-full object-contain"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-[#010100]/30 to-[#010100] rounded-md pointer-events-none opacity-90"></div>
-          <BorderBeam duration={8} size={100} />
-        </div>
+          className="mt-16 sm:mt-24 w-fit max-w-full mx-auto "
+          borderSize={0}
+          padding={0}
+          neonColors={{
+            firstColor: "#dcfce7",
+            secondColor: " #22c55e ",
+          }}
+        >
+          <div className="relative w-fit h-fit max-w-full text-green-100">
+            <img
+              alt="App screenshot"
+              src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+              width={2432}
+              height={1442}
+              className="rounded-md bg-white/5 ring-1 shadow-2xl ring-white/10 max-w-full object-contain"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-[#010100]/30 to-[#010100] rounded-md pointer-events-none opacity-90"></div>
+            <BorderBeam duration={8} size={100} />
+          </div>
         </NeonGradientCard>
       </div>
     </div>
