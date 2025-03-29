@@ -8,7 +8,7 @@ export default function Features() {
       <DiagonalPattern side="left" />
       <div className=" pt-16">
         <div className="w-full flex flex-col justify-center items-center gap-6 py-14">
-          <p className="text-2xl text-center sm:text-4xl text-white">
+          <p className="text-2xl text-center font-bricolage sm:text-4xl text-white">
             Three Powerful Modules in One Platform
           </p>
           <p className="text-neutral-500 sm:text-lg max-w-xl text-center">

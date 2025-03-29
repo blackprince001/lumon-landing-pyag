@@ -21,7 +21,7 @@ export default function Hero() {
               </AnimatedShinyText>
             </div>
           </div>
-          <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
+          <h1 className="text-5xl font-semibold font-bricolage tracking-tight text-balance text-white sm:text-7xl">
             A bigger, better financial{" "}
             <LineShadowText
               className="italic text-green-700"
