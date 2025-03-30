@@ -4,6 +4,7 @@ import { BorderBeam } from "@/components/utility/border-beam";
 import { LineShadowText } from "@/components/utility/line-shadow-text";
 import { NeonGradientCard } from "@/components/utility/neon-gradient-card";
 import { cn } from "@/lib/utils";
+import Dashaboard from "@/assets/dashboard.png";
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
               )}
             >
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out  hover:duration-300 hover:dark:text-neutral-400">
-                <span>✨ Introducing Magic UI</span>
+                <span>✨ Introducing Lumon Grounds ✨</span>
               </AnimatedShinyText>
             </div>
           </div>
@@ -53,7 +54,7 @@ export default function Hero() {
           <div className="relative w-fit h-fit max-w-full text-green-100">
             <img
               alt="App screenshot"
-              src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+              src={Dashaboard}
               width={2432}
               height={1442}
               className="rounded-md bg-white/5 ring-1 shadow-2xl ring-white/10 max-w-full object-contain"
