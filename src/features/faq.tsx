@@ -1,4 +1,9 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -26,23 +31,31 @@ const faqs = [
     answer:
       "Our AI analyzes transaction history and cash flow to generate a dynamic credit score. This helps lenders make informed decisions when offering loans.",
   },
-
 ];
 
 export default function FAQ() {
   return (
     <div>
-      <div className=" sm:py-16 flex flex-col items-center gap-5 border-b-[1.5px] w-full border-neutral-800">
-        <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl font-bricolage">Frequently Asked Questions</h2>
-        <p className="text-white">Answers to common questions about our financial platform. If you have any other questions, please don't hesitate to contact us.</p>
+      <div className=" sm:py-16 px-5 py-5 flex flex-col items-center gap-5 border-b-[1.5px] w-full border-neutral-800">
+        <h2 className="text-3xl text-center font-semibold tracking-tight text-white sm:text-5xl font-bricolage">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-white text-center">
+          Answers to common questions about our financial platform. If you have
+          any other questions, please don't hesitate to contact us.
+        </p>
       </div>
       <div className="max-w-7xl px-6 py-4 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-4xl pb-10">
-          <Accordion type="single" collapsible >
+          <Accordion type="single" collapsible>
             {faqs.map((faq) => (
               <AccordionItem key={faq.question} value={faq.question}>
-                <AccordionTrigger className="text-base font-semibold text-white">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-gray-300">{faq.answer}</AccordionContent>
+                <AccordionTrigger className="text-base font-semibold text-white">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

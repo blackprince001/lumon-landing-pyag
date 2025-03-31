@@ -1,6 +1,6 @@
-import { BentoCard } from "@/components/utility/bento-grid"
-import DiagonalPattern from "@/components/utility/diagonal-pattern"
-import { features } from "@/constants"
+import { BentoCard } from "@/components/utility/bento-grid";
+import DiagonalPattern from "@/components/utility/diagonal-pattern";
+import { features } from "@/constants";
 
 export default function Features() {
   return (
@@ -12,24 +12,24 @@ export default function Features() {
             Three Powerful Modules in One Platform
           </p>
           <p className="text-neutral-500 sm:text-lg max-w-xl text-center">
-            Our comprehensive financial platform combines
-            micro-investing, peer-to-peer lending, and AI-powered advice
-            to help you achieve your financial goals.
+            Our comprehensive financial platform combines micro-investing,
+            peer-to-peer lending, and AI-powered advice to help you achieve your
+            financial goals.
           </p>
         </div>
         <div className="w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-4">
-      {features.map((feature) => (
-        <BentoCard
-          key={feature.name}
-          {...feature}
-          className={`${feature.className} min-h-[500px]`}
-        />
-      ))}
-    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-4">
+            {features.map((feature) => (
+              <BentoCard
+                key={feature.name}
+                {...feature}
+                className={`${feature.className} min-h-[500px]`}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <DiagonalPattern side="right" />
     </div>
-  )
+  );
 }

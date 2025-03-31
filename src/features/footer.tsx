@@ -39,8 +39,11 @@ const Footer04Page = () => {
           <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6 xl:px-0">
             <div>
               {/* Logo */}
-              <img src={Lumon} alt="Logo" className="h-10 w-10 border rounded-full" />
-
+              <img
+                src={Lumon}
+                alt="Logo"
+                className="h-10 w-10 border rounded-full"
+              />
 
               <ul className="mt-6 flex items-center gap-4 flex-wrap">
                 {footerLinks.map(({ title, href }) => (
@@ -60,7 +63,11 @@ const Footer04Page = () => {
             <div className="max-w-xs w-full">
               <h6 className="font-semibold text-white">Stay up to date</h6>
               <form className="mt-6 flex items-center gap-2">
-                <Input type="email" placeholder="Enter your email" className="border-neutral-700" />
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="border-neutral-700"
+                />
                 <Button>Subscribe</Button>
               </form>
             </div>
@@ -70,8 +77,12 @@ const Footer04Page = () => {
             {/* Copyright */}
             <span className="text-white">
               &copy; {new Date().getFullYear()}{" "}
-              <a href="/" target="_blank" className="text-white hover:text-white">
-              Lumon
+              <a
+                href="/"
+                target="_blank"
+                className="text-white hover:text-white"
+              >
+                Lumon
               </a>
               . All rights reserved.
             </span>

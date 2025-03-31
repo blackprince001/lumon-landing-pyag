@@ -1,12 +1,15 @@
 export interface DiagonalPatternProps {
-    className?: string
-    side?: "left" | "right"
-  }
-  
-  export default function DiagonalPattern({ className = "", side = "left" }: Readonly<DiagonalPatternProps>) {
-    return (
-      <div
-        className={`
+  className?: string;
+  side?: "left" | "right";
+}
+
+export default function DiagonalPattern({
+  className = "",
+  side = "left",
+}: Readonly<DiagonalPatternProps>) {
+  return (
+    <div
+      className={`
           row-span-full 
           max-sm:hidden 
           text-zinc-800 
@@ -19,8 +22,6 @@ export interface DiagonalPatternProps {
           w-full
           ${className}
         `}
-      />
-    )
-  }
-  
-  
+    />
+  );
+}
