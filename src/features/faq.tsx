@@ -7,30 +7,26 @@ import {
 
 const faqs = [
   {
-    question: "What is micro-investing and how does it work?",
+    question: " What is Budge AI, and how can it help me?",
     answer:
-      "Micro-investing allows users to invest small amounts of money into diversified portfolios. Our platform automatically allocates funds based on user preferences and risk appetite.",
+      "Budge AI is your smart money assistant! It tracks your spending and builds a budget for you.  No spreadsheets, no mental tracking—just clear insights and easy automation to keep your finances on track.",
   },
   {
-    question: "How does the AI-powered financial advisor help me?",
+    question: "Do I have to set up my own budget?",
     answer:
-      "Our AI advisor provides personalized insights, tracks spending habits, suggests budget improvements, and offers investment recommendations based on your financial data.",
+      "Nope! Budge AI does the heavy lifting. It analyzes your income and spending patterns to create a budget that works for you. Plus, it adapts over time, so if your habits change, your budget does too.",
   },
   {
-    question: "Is my financial data secure on this platform?",
+    question: ". Can I link my bank accounts, and is it safe?",
     answer:
-      "Yes, we implement end-to-end encryption, multi-factor authentication, and strict data protection measures to ensure your financial data remains safe and private.",
+      "Yes, you can securely connect your bank accounts to sync transactions automatically. No manual effort! And our top-tier encryption and security measures keep your financial data safe, always.",
   },
   {
-    question: "How does peer-to-peer lending work?",
+    question: " How can I “talk to my money” with Budge AI?",
     answer:
-      "Users can request or provide loans through our decentralized lending platform. The AI-driven credit scoring system helps assess borrower risk and ensures secure transactions.",
+      "Budge AI makes managing your money feel like a conversation. “You can ask questions like “How much did I spend on dining last month?” or “Am I staying within my budget?”—and you’ll get instant, clear answers.",
   },
-  {
-    question: "What is AI-powered credit scoring?",
-    answer:
-      "Our AI analyzes transaction history and cash flow to generate a dynamic credit score. This helps lenders make informed decisions when offering loans.",
-  },
+
 ];
 
 export default function FAQ() {

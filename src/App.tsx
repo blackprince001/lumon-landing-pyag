@@ -8,7 +8,7 @@ import Footer04Page from "./features/footer";
 
 export default function App(){
   return (
-    <div className="w-full min-h-screen bg-background font-manrope ">
+    <div className="w-full min-h-screen bg-background  ">
        <div className="w-full">
        <div className="mx-auto max-w-7xl px-6 lg:px-4 h-full w-full  border-x-[1.5px] border-neutral-800 ">
         <div className="w-full border-x-[1.5px] min-h-full border-neutral-800">

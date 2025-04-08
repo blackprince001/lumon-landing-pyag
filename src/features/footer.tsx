@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import Lumon from "../../public/lumon.png";
+import logo from "@/assets/Dark.png"
 
 const footerLinks = [
   {
@@ -40,9 +40,9 @@ const Footer04Page = () => {
             <div>
               {/* Logo */}
               <img
-                src={Lumon}
+                src={logo}
                 alt="Logo"
-                className="h-10 w-10 border rounded-full"
+                className="h-10 w-10 border border-zinc-700 rounded-full"
               />
 
               <ul className="mt-6 flex items-center gap-4 flex-wrap">

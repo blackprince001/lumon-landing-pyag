@@ -12,6 +12,7 @@ import {
   BookAudio,
   BotIcon,
   DollarSign,
+  TrendingUpDown,
   TrendingUpIcon,
   Users2
 } from "lucide-react";
@@ -19,9 +20,11 @@ import {
 export const features = [
   {
     Icon: BotIcon,
-    name: "Real-time AI Collaboration",
+    name: "Talk To Your Money",
     description:
-      "Get personalized financial advice from our AI. Get budgeting tips, investment strategies, and data-driven insights tailored to you.",
+      `Get personalized money insights from Budge’s AI.
+Ask questions about your spending, get smart budgeting tips, and make confident financial decisions—all powered by your real-time financial data.
+`,
     href: "/",
     cta: "Learn more",
     background: (
@@ -33,9 +36,9 @@ export const features = [
   },
   {
     Icon: Users2,
-    name: "Connect & Lend",
+    name: "Track Anywhere",
     description:
-      "Join secure peer-to-peer lending with clear terms and AI risk assessment. Lend for great returns or borrow at fair rates.",
+      "Whether it’s mobile money in Accra, a bank in Lagos, or M-Pesa in Nairobi, Budge AI syncs with your transaction alerts—SMS, email, or push—so you can manage all your finances in one place, effortlessly.",
     href: "/",
     cta: "Learn more",
     background: (
@@ -50,9 +53,9 @@ export const features = [
   },
   {
     Icon: BookAudio,
-    name: "Learn & Grow",
+    name: "Build Better Money Habits",
     description:
-      "Start your investment journey with as little as Ghc 5. Access diversified portfolios tailored to your goals, track your progress, and improve your financial literacy through personalized educational content.",
+      "Track your expenses, set savings goals, and stay on top of your financial life. Budge AI makes personal finance simple, intuitive, and designed for how you actually live",
     href: "/",
     cta: "Learn more",
     background: (
@@ -63,9 +66,9 @@ export const features = [
     className: "col-span-2 row-span-1 pb-3",
   },
   {
-    Icon: DollarSign,
-    name: "Credit scoring analysis",
-    description: "Analyze credit scores by filtering files based on date.",
+    Icon: TrendingUpDown,
+    name: "Patterns, Over Time",
+    description: "Filter transactions by date and category to spot trends. Budge AI helps you understand your money habits so you can make smarter decisions, month after month.",
     href: "/",
     cta: "Learn more",
     background: (

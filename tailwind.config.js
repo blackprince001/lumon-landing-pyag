@@ -9,6 +9,7 @@ export default {
   	extend: {
   		fontFamily: {
   			manrope: 'Manrope',
+			dmsans:"DM Sans",
   			bricolage: 'Bricolage Grotesque'
   		},
   		colors: {
