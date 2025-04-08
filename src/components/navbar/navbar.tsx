@@ -1,31 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { NavMenu } from "./nav-menu";
-import { NavigationSheet } from "./navigation-sheet";
 import Lumon from "../../../public/lumon.png";
 
 export default function Navbar () {
   return (
-    <div className="  backdrop-blur-sm text-white">
-      <nav className="fixed top-6 inset-x-4 h-16 bg-transparent border border-[#302f31] max-w-screen-xl mx-auto rounded-full">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center w-full px-4">
+      <nav className="mt-6 h-16 bg-transparent border border-[#302f31] w-full max-w-screen-xl mx-auto rounded-full backdrop-blur-md">
         <div className="h-full flex items-center justify-between mx-auto px-4">
           <img src={Lumon} alt="Logo" className="h-10 w-10 border rounded-full" />
 
-          {/* Desktop Menu */}
-          <NavMenu className="hidden md:block" />
-
+       
+    
           <div className="flex items-center gap-3">
             <Button
               variant="outline"
-              className="hidden sm:inline-flex text-black rounded-full"
+              className="inline-flex text-black rounded-full"
             >
-              Sign In
+              Get early access
             </Button>
-            <Button className="rounded-full">Get Started</Button>
-
-            {/* Mobile Menu */}
-            <div className="md:hidden">
-              <NavigationSheet />
-            </div>
+         
+        
           </div>
         </div>
       </nav>

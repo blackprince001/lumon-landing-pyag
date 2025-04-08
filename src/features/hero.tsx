@@ -18,23 +18,21 @@ export default function Hero() {
               )}
             >
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out  hover:duration-300 hover:dark:text-neutral-400">
-                <span className="text-sm">✨ Introducing Lumon Grounds ✨</span>
+                <span className="text-sm">Universal bank and mobile money support now available</span>
               </AnimatedShinyText>
             </div>
           </div>
           <h1 className="text-5xl font-semibold font-bricolage tracking-tight text-balance text-white sm:text-7xl">
-            A bigger, better financial{" "}
-            <LineShadowText
+          A    <LineShadowText
               className="italic text-green-700"
               shadowColor={" #16a34a "}
             >
-              Boost!
-            </LineShadowText>
+         money 
+            </LineShadowText>management app you’ll enjoy using
+          
           </h1>
           <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-            Combine micro-investing, peer-to-peer lending, and AI-powered
-            financial advice in one powerful platform to take control of your
-            financial future.
+          Talk to your money, track insights effortlessly, and let automation do the heavy lifting—Budge AI makes managing your finances easier than ever.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button className="rounded-full bg-green-700" size="lg">
