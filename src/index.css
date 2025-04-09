@@ -19,4 +19,38 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  
+  /* Safari scroll optimization */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize scrolling performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations and transforms for Safari */
+.animate-gpu,
+.transition-gpu,
+.globe-container {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+}
+
+/* Prevent content jumping and improve scroll performance */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

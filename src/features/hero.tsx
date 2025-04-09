@@ -49,7 +49,7 @@ export default function Hero() {
             secondColor: " #22c55e ",
           }}
         >
-          <div className="relative w-fit h-fit max-w-full rounded-[4rem] text-green-100">
+          <div className="relative w-fit h-fit max-w-full rounded-[3em] sm:rounded-[4rem] text-green-100">
           <svg role="img" viewBox="0 0 366 729" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
               <title>App screenshot</title>
               <defs>

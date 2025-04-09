@@ -2,7 +2,7 @@
 
 import createGlobe, { COBEOptions } from "cobe";
 import { useMotionValue, useSpring } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -44,8 +44,11 @@ export function Globe({
   config?: COBEOptions;
 }) {
   let phi = 0;
-  let width = 0;
+  const [isLoaded, setIsLoaded] = useState(false);
+  const widthRef = useRef<number>(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const globeRef = useRef<ReturnType<typeof createGlobe> | null>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
 
@@ -71,39 +74,80 @@ export function Globe({
     }
   };
 
-  useEffect(() => {
-    const onResize = () => {
-      if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth;
-      }
-    };
-
-    window.addEventListener("resize", onResize);
-    onResize();
-
-    const globe = createGlobe(canvasRef.current!, {
+  // Initialize globe with proper dimensions
+  const initGlobe = () => {
+    if (!canvasRef.current || !containerRef.current || globeRef.current) return;
+    
+    const containerWidth = containerRef.current.offsetWidth;
+    widthRef.current = containerWidth;
+    
+    // Use a consistent aspect ratio
+    const size = Math.min(containerWidth, 600);
+    
+    // Create the globe with proper dimensions
+    globeRef.current = createGlobe(canvasRef.current, {
       ...config,
-      width: width * 2,
-      height: width * 2,
+      width: size * 2,  // High resolution (2x)
+      height: size * 2, // High resolution (2x)
       onRender: (state) => {
         if (!pointerInteracting.current) phi += 0.005;
         state.phi = phi + rs.get();
-        state.width = width * 2;
-        state.height = width * 2;
+        state.width = size * 2;
+        state.height = size * 2;
       },
     });
+    
+    // Show the canvas with a delay to ensure smooth transition
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+        setIsLoaded(true);
+      }
+    }, 100);
+  };
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"), 0);
+  useEffect(() => {
+    // Use a small delay to ensure container is properly sized
+    const initTimer = setTimeout(initGlobe, 300);
+    
+    // Use ResizeObserver for more reliable size monitoring
+    const resizeObserver = new ResizeObserver((entries) => {
+      if (!containerRef.current || !entries[0]) return;
+      
+      // Only reinitialize if size changed significantly
+      const newWidth = entries[0].contentRect.width;
+      if (Math.abs(newWidth - widthRef.current) > 20 && globeRef.current) {
+        // Clean up old globe
+        globeRef.current.destroy();
+        globeRef.current = null;
+        
+        // Hide canvas during transition
+        if (canvasRef.current) canvasRef.current.style.opacity = "0";
+        
+        // Re-initialize with new dimensions
+        setTimeout(initGlobe, 100);
+      }
+    });
+    
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
     return () => {
-      globe.destroy();
-      window.removeEventListener("resize", onResize);
+      clearTimeout(initTimer);
+      resizeObserver.disconnect();
+      if (globeRef.current) {
+        globeRef.current.destroy();
+      }
     };
   }, [rs, config]);
 
   return (
     <div
+      ref={containerRef}
       className={cn(
         "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        isLoaded ? "opacity-100" : "opacity-0",
         className
       )}
     >

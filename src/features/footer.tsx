@@ -82,7 +82,7 @@ const Footer04Page = () => {
                 target="_blank"
                 className="text-white hover:text-white"
               >
-                Lumon
+              BudgeAi
               </a>
               . All rights reserved.
             </span>
