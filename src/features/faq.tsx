@@ -7,7 +7,7 @@ import {
 
 const faqs = [
   {
-    question: " What is Budge AI, and how can it help me?",
+    question: "What is Budge AI, and how can it help me?",
     answer:
       "Budge AI is your smart money assistant! It tracks your spending and builds a budget for you.  No spreadsheets, no mental tracking—just clear insights and easy automation to keep your finances on track.",
   },
@@ -17,14 +17,14 @@ const faqs = [
       "Nope! Budge AI does the heavy lifting. It analyzes your income and spending patterns to create a budget that works for you. Plus, it adapts over time, so if your habits change, your budget does too.",
   },
   {
-    question: ". Can I link my bank accounts, and is it safe?",
+    question: "Can I link my bank accounts, and is it safe?",
     answer:
       "Yes, you can securely connect your bank accounts to sync transactions automatically. No manual effort! And our top-tier encryption and security measures keep your financial data safe, always.",
   },
   {
-    question: " How can I “talk to my money” with Budge AI?",
+    question: "How can I “talk to my money” with Budge AI?",
     answer:
-      "Budge AI makes managing your money feel like a conversation. “You can ask questions like “How much did I spend on dining last month?” or “Am I staying within my budget?”—and you’ll get instant, clear answers.",
+      "Budge AI makes managing your money feel like a conversation. “You can ask questions like “How much did I spend on dining last month?” or “Am I staying within my budget?”—and you'll get instant, clear answers.",
   },
 
 ];
@@ -32,8 +32,8 @@ const faqs = [
 export default function FAQ() {
   return (
     <div>
-      <div className=" sm:py-16 px-5 py-5 flex flex-col items-center gap-5 border-b-[1.5px] w-full border-neutral-800">
-        <h2 className="text-3xl text-center font-semibold tracking-tight text-white sm:text-5xl font-bricolage">
+      <div className="sm:py-16 px-5 py-5 flex flex-col items-center gap-5 border-b-[1.5px] w-full border-neutral-800">
+        <h2 className="text-3xl text-center font-semibold tracking-tight text-white sm:text-5xl font-dmsans">
           Frequently Asked Questions
         </h2>
         <p className="text-white text-center">

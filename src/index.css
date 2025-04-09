@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-    --radius: 0.5rem;
-    --background: #19181a;
-    --foreground: #1d1c1e;
-    --text: "white";
-    --secondary: #00b23b;
-  }
-
+  --radius: 0.5rem;
+  --background: #19181a;
+  --foreground: #1d1c1e;
+  --text: "white";
+  --secondary: #00b23b;
+}
 
 body {
   background-color: var(--background);
@@ -19,15 +18,18 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  
-  /* Safari scroll optimization */
+
   -webkit-overflow-scrolling: touch;
+
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* Optimize scrolling performance */
-* {
+*:not(img) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  will-change: transform, opacity;
 }
 
 /* Optimize animations and transforms for Safari */
@@ -40,13 +42,19 @@ body {
   -webkit-backface-visibility: hidden;
   perspective: 1000;
   -webkit-perspective: 1000;
+  will-change: transform, opacity;
 }
+
 
 /* Prevent content jumping and improve scroll performance */
 html {
   scroll-behavior: smooth;
   height: 100%;
   overflow-x: hidden;
+
+  /* Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

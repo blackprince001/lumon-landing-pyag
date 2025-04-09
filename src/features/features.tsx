@@ -8,11 +8,11 @@ export default function Features() {
       <DiagonalPattern side="left" />
       <div className=" pt-16">
         <div className="w-full flex flex-col justify-center items-center gap-6 py-14">
-          <p className="text-2xl text-center font-bricolage sm:text-4xl text-white">
-          Personal Finance that works for You
+          <p className="text-2xl text-center font-dmsans sm:text-4xl text-white px-2">
+            Personal Finance that works for You
           </p>
-          <p className="text-neutral-500 sm:text-lg max-w-xl text-center">
-          “Budge AI brings together smart expense tracking, intuitive budgeting, instant syncing, and personalized AI insights to help you manage your money with ease and confidence.
+          <p className="text-neutral-500 sm:text-lg max-w-xl text-center p-4">
+            “Budge AI brings together smart expense tracking, intuitive budgeting, instant syncing, and personalized AI insights to help you manage your money with ease and confidence.
           </p>
         </div>
         <div className="w-full">

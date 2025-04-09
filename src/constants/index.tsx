@@ -11,7 +11,6 @@ import { LearnAndGrowCards } from "@/features/bento/book-marquee";
 import {
   BookAudio,
   BotIcon,
-  DollarSign,
   TrendingUpDown,
   TrendingUpIcon,
   Users2
@@ -22,7 +21,7 @@ export const features = [
     Icon: BotIcon,
     name: "Talk To Your Money",
     description:
-      `Get personalized money insights from Budge’s AI.
+      `Get personalized money insights from Budge's AI.
 Ask questions about your spending, get smart budgeting tips, and make confident financial decisions—all powered by your real-time financial data.
 `,
     href: "/",
@@ -38,7 +37,7 @@ Ask questions about your spending, get smart budgeting tips, and make confident 
     Icon: Users2,
     name: "Track Anywhere",
     description:
-      "Whether it’s mobile money in Accra, a bank in Lagos, or M-Pesa in Nairobi, Budge AI syncs with your transaction alerts—SMS, email, or push—so you can manage all your finances in one place, effortlessly.",
+      "Whether it's mobile money in Accra, a bank in Lagos, or M-Pesa in Nairobi, Budge AI syncs with your transaction alerts—SMS, email, or push—so you can manage all your finances in one place, effortlessly.",
     href: "/",
     cta: "Learn more",
     background: (
@@ -73,19 +72,21 @@ Ask questions about your spending, get smart budgeting tips, and make confident 
     cta: "Learn more",
     background: (
       <div className=" absolute top-8 right-10">
-        <Card className="@container/card bg-neutral-800 border-none text-white ">
-          <CardHeader className="relative">
-            <CardDescription>Credit Score</CardDescription>
-            <CardTitle className="@[250px]/card:text-5xl text-2xl font-semibold tabular-nums">
-           700
-            </CardTitle>
-          </CardHeader>
-          <CardFooter className="flex-col items-start gap-1 text-sm">
-            <div className="line-clamp-1 flex gap-2 font-medium">
-              Your credit score has increased <TrendingUpIcon className="size-4" />
-            </div>
-          </CardFooter>
-        </Card>
+        <div className="flex justify-center items-center h-full">
+          <Card className="@container/card bg-neutral-800 border-none text-white">
+            <CardHeader className="relative">
+              <CardDescription>Credit Score</CardDescription>
+              <CardTitle className="@[250px]/card:text-5xl text-2xl font-semibold tabular-nums text-green-500">
+                700
+              </CardTitle>
+            </CardHeader>
+            <CardFooter className="flex-col items-start gap-1 text-sm">
+              <div className="line-clamp-1 flex gap-2 font-medium">
+                Your credit score has increased <TrendingUpIcon className="size-4 text-green-500" />
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
       </div>
     ),
     className: "col-span-2 row-span-1 pb-3",

@@ -18,21 +18,21 @@ export default function Hero() {
               )}
             >
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out  hover:duration-300 hover:dark:text-neutral-400">
-                <span className="text-sm">Universal bank and mobile money support now available</span>
+                <span className="text-sm">✨ Universal bank and mobile money support now available</span>
               </AnimatedShinyText>
             </div>
           </div>
-          <h1 className="text-5xl font-semibold font-bricolage tracking-tight text-balance text-white sm:text-7xl">
-          A    <LineShadowText
+          <h1 className="text-5xl font-semibold font-dmsans tracking-tight text-balance text-white sm:text-7xl">
+            A    <LineShadowText
               className="italic text-green-700"
               shadowColor={" #16a34a "}
             >
-         money 
-            </LineShadowText>management app you’ll enjoy using
-          
+              money
+            </LineShadowText>management app you'll enjoy using
+
           </h1>
           <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-          Talk to your money, track insights effortlessly, and let automation do the heavy lifting—Budge AI makes managing your finances easier than ever.
+            Talk to your money, track insights effortlessly, and let automation do the heavy lifting—Budge AI makes managing your finances easier than ever.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button className="rounded-full bg-green-700" size="lg">
@@ -50,7 +50,7 @@ export default function Hero() {
           }}
         >
           <div className="relative w-fit h-fit max-w-full rounded-[3em] sm:rounded-[4rem] text-green-100">
-          <svg role="img" viewBox="0 0 366 729" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
+            <svg role="img" viewBox="0 0 366 729" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
               <title>App screenshot</title>
               <defs>
                 <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
@@ -71,7 +71,7 @@ export default function Hero() {
                 clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
                 transform="translate(24 24)"
               >
-                <img alt="" src={app} className="w-full h-full object-fit" />
+                <img alt="" src={app} className="w-full h-full object-cover object-left" />
               </foreignObject>
             </svg>
 

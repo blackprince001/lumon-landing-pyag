@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import lumen from "@/assets/ChatGPT_Image_Mar_28_2025_11_31_52_PM.webp";
+import logo from "@/assets/Dark.png";
 import { TypingAnimation } from "@/components/utility/typing-animation";
 export default function SimpleChat() {
   return (
-    <div className="flex flex-col h-screen p-4">
+    <div className="flex flex-col h-screen p-8">
       <div className="flex justify-end items-start gap-2 mb-4">
         <Card className="max-w-[65%] p-5 bg-green-800 text-white border-none">
           <CardContent className="p-0">
@@ -16,7 +16,7 @@ export default function SimpleChat() {
         <div className="flex items-center justify-center w-10 h-10 rounded-full ">
           <img
             src="https://github.com/shadcn.png"
-            alt="lumen logo"
+            alt="logo logo"
             className="w-full h-full rounded-full"
           />
           ;
@@ -26,8 +26,8 @@ export default function SimpleChat() {
       <div className="flex justify-start items-start gap-2">
         <div className="flex items-center justify-center w-10 h-10 rounded-full ">
           <img
-            src={lumen}
-            alt="lumen logo"
+            src={logo}
+            alt="logo logo"
             className="w-full h-10 rounded-full"
           />
         </div>
