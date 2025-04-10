@@ -45,7 +45,6 @@ body {
   will-change: transform, opacity;
 }
 
-
 /* Prevent content jumping and improve scroll performance */
 html {
   scroll-behavior: smooth;
@@ -56,6 +55,7 @@ html {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }
+
 
 @media screen and (prefers-reduced-motion: reduce) {
   html {

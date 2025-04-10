@@ -13,12 +13,14 @@ export default function Navbar() {
           />
 
           <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              className="inline-flex text-black rounded-full"
-            >
-              Get early access
-            </Button>
+            <a href="https://tally.so/r/n9pAx1">
+              <Button
+                variant="outline"
+                className="inline-flex text-black rounded-full"
+              >
+                Get early access
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
