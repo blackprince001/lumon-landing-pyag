@@ -35,7 +35,7 @@ export default function SimpleChat() {
         <Card className="max-w-[75%] p-5 bg-zinc-800 border-none text-white">
           <CardContent className="p-0">
             <p className="text-sm font-medium">
-              <TypingAnimation>
+              <TypingAnimation as="span">
                 Try the 50/30/20 rule: 50% for needs, 30% for wants, 20% for
                 savings. I can help automate savings and cut unnecessary
                 expenses. Want a custom plan?
