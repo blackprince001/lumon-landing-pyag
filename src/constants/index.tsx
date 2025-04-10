@@ -1,18 +1,11 @@
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Globe } from "@/components/utility/globe";
 import SimpleChat from "@/features/bento/ai-chat";
 import { LearnAndGrowCards } from "@/features/bento/book-marquee";
+import Stats08 from "@/features/bento/trends";
 import {
   BookAudio,
   BotIcon,
   TrendingUpDown,
-  TrendingUpIcon,
   Users2
 } from "lucide-react";
 
@@ -71,22 +64,10 @@ Ask questions about your spending, get smart budgeting tips, and make confident 
     href: "/",
     cta: "Learn more",
     background: (
-      <div className=" absolute top-8 right-10">
-        <div className="flex justify-center items-center h-full">
-          <Card className="@container/card bg-neutral-800 border-none text-white">
-            <CardHeader className="relative">
-              <CardDescription>Credit Score</CardDescription>
-              <CardTitle className="@[250px]/card:text-5xl text-2xl font-semibold tabular-nums text-green-500">
-                700
-              </CardTitle>
-            </CardHeader>
-            <CardFooter className="flex-col items-start gap-1 text-sm">
-              <div className="line-clamp-1 flex gap-2 font-medium">
-                Your credit score has increased <TrendingUpIcon className="size-4 text-green-500" />
-              </div>
-            </CardFooter>
-          </Card>
-        </div>
+      <div className="pt-1 w-full absolute h-full">
+    
+    <Stats08/>
+   
       </div>
     ),
     className: "col-span-2 row-span-1 pb-3",
