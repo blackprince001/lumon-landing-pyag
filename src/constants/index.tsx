@@ -3,9 +3,9 @@ import SimpleChat from "@/features/bento/ai-chat";
 import { LearnAndGrowCards } from "@/features/bento/book-marquee";
 import Stats08 from "@/features/bento/trends";
 import {
-  BookAudio,
   BookCheckIcon,
   BotIcon,
+  ChartCandlestickIcon,
   Users2
 } from "lucide-react";
 
@@ -43,7 +43,7 @@ export const features = [
   },
   {
     Icon: BookCheckIcon,
-    name: "Stay on Track",
+    name: "Stay on Course",
     description: " Keep your spending aligned with your goals. See how you're doing—at a glance.",
     href: "/",
     cta: "Learn more",
@@ -55,7 +55,7 @@ export const features = [
     className: "col-span-2 row-span-1 pb-3",
   },
   {
-    Icon: BookAudio,
+    Icon: ChartCandlestickIcon,
     name: "Build Better Money Habits",
     description:
       "Track expenses, set goals, and manage money effortlessly with Budge AI.",

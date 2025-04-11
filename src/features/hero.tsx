@@ -33,7 +33,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="relative z-30">
+        <div>
           <BudgeAIForm />
         </div>
 
