@@ -1,34 +1,57 @@
-import { useState } from "react";
-import { createPortal } from "react-dom";
-import { RemoveScroll } from 'react-remove-scroll';
-import { Button } from "./ui/button";
+"use client"
+
+import type React from "react"
+
+import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
+import { RemoveScroll } from "react-remove-scroll"
+import { Button } from "./ui/button"
 
 const TallyFormModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
+  const [modalPosition, setModalPosition] = useState({ top: 0 })
+
+  useEffect(() => {
+    if (isOpen) {
+      const scrollY = window.scrollY
+      const viewportHeight = window.innerHeight
+
+      setModalPosition({ top: scrollY + viewportHeight * 0.1 })
+
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isOpen])
+
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      onClose()
     }
-  };
+  }
 
   return createPortal(
     <div
       onClick={handleBackdropClick}
-      className={`fixed inset-0 bg-black bg-opacity-80 z-[9999] backdrop-blur-md transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      className={`fixed inset-0 bg-black bg-opacity-80 z-[9999] backdrop-blur-md transition-opacity duration-300 ease-in-out ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
     >
       <RemoveScroll enabled={isOpen}>
         <div
-          className={`bg-white rounded-lg relative w-full max-w-xl mx-auto transition-all duration-300 ease-in-out ${isOpen ? 'translate-y-0' : 'translate-y-4'
+          className={`bg-white rounded-lg relative w-full max-w-3xl mx-auto transition-all duration-300 ease-in-out ${isOpen ? "translate-y-0" : "translate-y-4"
             }`}
           style={{
-            position: 'absolute',
-            top: '8rem',
-            height: '80vh',
+            position: "absolute",
+            top: `${modalPosition.top}px`,
             left: 0,
             right: 0,
-            bottom: 0,
-            margin: '0 auto',
-            opacity: isOpen ? 1 : 0
+            maxHeight: "80vh",
+            height: "80vh",
+            margin: "0 auto",
+            opacity: isOpen ? 1 : 0,
           }}
         >
           <button
@@ -38,14 +61,14 @@ const TallyFormModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
           >
             ×
           </button>
-          <div className="h-full rounded-lg">
+          <div className="h-[70vh] rounded-lg">
             <iframe
               src="https://tally.so/r/n9pAx1"
               className="w-full h-full"
               style={{
                 border: "none",
                 overflow: "auto",
-                display: "block"
+                display: "block",
               }}
               title="Tally subscription form"
             />
@@ -53,69 +76,48 @@ const TallyFormModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
         </div>
       </RemoveScroll>
     </div>,
-    document.body
-  );
-};
+    document.body,
+  )
+}
 
 export default function BudgeAIForm() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <div className="mt-10 flex items-center justify-center gap-x-6">
-      <Button
-        className="rounded-full bg-green-700 hover:bg-green-600"
-        size="lg"
-        onClick={() => setIsModalOpen(true)}
-      >
+      <Button className="rounded-full bg-green-700 hover:bg-green-600" size="lg" onClick={() => setIsModalOpen(true)}>
         Get Early Access
       </Button>
 
-      <TallyFormModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      <TallyFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
-  );
+  )
 }
 
 export function BudgeAIFormNavbar() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <div>
-      <Button
-        variant="outline"
-        className="inline-flex text-black rounded-full"
-        onClick={() => setIsModalOpen(true)}
-      >
+      <Button variant="outline" className="inline-flex text-black rounded-full" onClick={() => setIsModalOpen(true)}>
         Get Early Access
       </Button>
 
-      <TallyFormModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      <TallyFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
-  );
+  )
 }
 
 export function BudgeAIFormFaq() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <div className="mt-10 flex items-center justify-center gap-x-6">
-      <Button
-        className="h-10 mt-16 rounded-3xl px-8"
-        size="lg"
-        onClick={() => setIsModalOpen(true)}
-      >
+      <Button className="h-10 mt-16 rounded-3xl px-8" size="lg" onClick={() => setIsModalOpen(true)}>
         Get Early Access
       </Button>
 
-      <TallyFormModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      <TallyFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
-  );
+  )
 }
