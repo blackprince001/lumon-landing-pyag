@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import logo from "@/assets/Dark.png";
+import { BudgeAIFormNavbar } from "../modal";
 
 export default function Navbar() {
   return (
@@ -13,14 +13,7 @@ export default function Navbar() {
           />
 
           <div className="flex items-center gap-3">
-            <a href="https://tally.so/r/n9pAx1">
-              <Button
-                variant="outline"
-                className="inline-flex text-black rounded-full"
-              >
-                Get early access
-              </Button>
-            </a>
+            <BudgeAIFormNavbar />
           </div>
         </div>
       </nav>

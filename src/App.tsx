@@ -2,8 +2,8 @@ import Navbar from "@/components/navbar/navbar";
 import Hero from "@/features/hero";
 import Features from "@/features/features";
 import Faq from "@/features/faq";
-import { Button } from "./components/ui/button";
 import Footer04Page from "./features/footer";
+import { BudgeAIFormFaq } from "./components/modal";
 
 export default function App() {
   return (
@@ -30,11 +30,8 @@ export default function App() {
                 <h2 className="text-balance text-4xl font-dmsans font-semibold tracking-tight text-white sm:text-5xl">
                   Ready to Transform Your Financial Future?
                 </h2>
-                <a href="https://tally.so/r/n9pAx1">
-                  <Button className=" h-10 mt-16 rounded-3xl px-8">
-                    Start today for free
-                  </Button>
-                </a>
+
+                <BudgeAIFormFaq />
               </div>
             </div>
           </div>

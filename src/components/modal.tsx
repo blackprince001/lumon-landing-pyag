@@ -1,31 +1,75 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Button } from "./ui/button";
 
 const TallyFormModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
-  return (
+  const [mounted, setMounted] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      setScrollY(window.scrollY);
+      setMounted(true);
+
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [isOpen]);
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  if (!mounted || !isOpen) return null;
+
+  return createPortal(
     <div
-      className={`fixed inset-0 bg-black bg-opacity-80 z-[100] flex items-center justify-center p-4 backdrop-blur-md transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+      onClick={handleBackdropClick}
+      className="fixed inset-0 bg-black bg-opacity-80 z-[9999] backdrop-blur-md"
     >
       <div
-        className={`bg-white rounded-lg relative w-[95vw] md:w-[90vw] lg:w-[85vw] h-[90vh] transform transition-transform duration-300 ${isOpen ? "scale-100" : "scale-95"
-          }`}
+        className="bg-white rounded-lg relative mx-4"
+        style={{
+          position: 'absolute',
+          top: `calc(4rem + ${scrollY}px)`,
+          height: '80vh',
+          left: 0,
+          right: 0,
+          maxWidth: '100%',
+          width: 'calc(100% - 2rem)',
+          margin: '0 auto'
+        }}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-6 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-lg text-3xl text-gray-700 hover:text-gray-900 transition-colors"
+          className="absolute -top-12 right-0 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-lg text-3xl text-gray-700 hover:text-gray-900 transition-colors lg:hidden"
           aria-label="Close modal"
         >
           ×
         </button>
-        <iframe
-          src="https://tally.so/r/n9pAx1"
-          className="w-full h-full rounded-lg"
-          style={{ height: "100%", border: "none" }}
-          title="Tally subscription form"
-        />
+        <div className="h-full">
+          <iframe
+            src="https://tally.so/r/n9pAx1"
+            className="w-full h-full"
+            style={{
+              border: "none",
+              overflow: "auto",
+              display: "block"
+            }}
+            title="Tally subscription form"
+          />
+        </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
@@ -36,6 +80,48 @@ export default function BudgeAIForm() {
     <div className="mt-10 flex items-center justify-center gap-x-6">
       <Button
         className="rounded-full bg-green-700 hover:bg-green-600"
+        size="lg"
+        onClick={() => setIsModalOpen(true)}
+      >
+        Get Early Access
+      </Button>
+
+      <TallyFormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
+  );
+}
+
+export function BudgeAIFormNavbar() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <div>
+      <Button
+        variant="outline"
+        className="inline-flex text-black rounded-full"
+        onClick={() => setIsModalOpen(true)}
+      >
+        Get Early Access
+      </Button>
+
+      <TallyFormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
+  );
+}
+
+export function BudgeAIFormFaq() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <div className="mt-10 flex items-center justify-center gap-x-6">
+      <Button
+        className="h-10 mt-16 rounded-3xl px-8"
         size="lg"
         onClick={() => setIsModalOpen(true)}
       >
