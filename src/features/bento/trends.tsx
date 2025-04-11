@@ -9,10 +9,8 @@ const data = [
     budget: "$1,000",
     current: "$250",
     href: "#",
-    fill: "#15803d",
+    fill: "#22c55e", // Lighter version of the original color (#15803d)
   },
-
-
 ];
 
 const chartConfig = {
@@ -66,7 +64,7 @@ export default function Stats08() {
                   </div>
                 </div>
                 <div>
-                  <dd className="text-base font-medium text-white">
+                  <dd className="text-base font-medium text-[#15803d]">
                     {item.current} / {item.budget}
                   </dd>
                   <dt className="text-sm text-zinc-500">

@@ -4,8 +4,8 @@ import { LearnAndGrowCards } from "@/features/bento/book-marquee";
 import Stats08 from "@/features/bento/trends";
 import {
   BookAudio,
+  BookCheckIcon,
   BotIcon,
-  TrendingUpDown,
   Users2
 } from "lucide-react";
 
@@ -14,9 +14,7 @@ export const features = [
     Icon: BotIcon,
     name: "Talk To Your Money",
     description:
-      `Get personalized money insights from Budge's AI.
-Ask questions about your spending, get smart budgeting tips, and make confident financial decisions—all powered by your real-time financial data.
-`,
+      `Get AI-powered money insights—track spending, budget smarter, and make confident decisions.`,
     href: "/",
     cta: "Learn more",
     background: (
@@ -30,7 +28,7 @@ Ask questions about your spending, get smart budgeting tips, and make confident 
     Icon: Users2,
     name: "Track Anywhere",
     description:
-      "Whether it's mobile money in Accra, a bank in Lagos, or M-Pesa in Nairobi, Budge AI syncs with your transaction alerts—SMS, email, or push—so you can manage all your finances in one place, effortlessly.",
+      "Sync transaction alerts from mobile money, banks, and M-Pesa for a complete financial view.",
     href: "/",
     cta: "Learn more",
     background: (
@@ -44,30 +42,28 @@ Ask questions about your spending, get smart budgeting tips, and make confident 
     className: "col-span-2 row-span-1",
   },
   {
-    Icon: BookAudio,
-    name: "Build Better Money Habits",
-    description:
-      "Track your expenses, set savings goals, and stay on top of your financial life. Budge AI makes personal finance simple, intuitive, and designed for how you actually live",
+    Icon: BookCheckIcon,
+    name: "Stay on Track",
+    description: " Keep your spending aligned with your goals. See how you're doing—at a glance.",
     href: "/",
     cta: "Learn more",
     background: (
-      <div className="pt-8 ">
-        <LearnAndGrowCards />
+      <div className="pt-1 w-full absolute h-full">
+        <Stats08 />
       </div>
     ),
     className: "col-span-2 row-span-1 pb-3",
   },
   {
-    Icon: TrendingUpDown,
-    name: "Patterns, Over Time",
-    description: "Filter transactions by date and category to spot trends. Budge AI helps you understand your money habits so you can make smarter decisions, month after month.",
+    Icon: BookAudio,
+    name: "Build Better Money Habits",
+    description:
+      "Track expenses, set goals, and manage money effortlessly with Budge AI.",
     href: "/",
     cta: "Learn more",
     background: (
-      <div className="pt-1 w-full absolute h-full">
-    
-    <Stats08/>
-   
+      <div className="pt-8 ">
+        <LearnAndGrowCards />
       </div>
     ),
     className: "col-span-2 row-span-1 pb-3",

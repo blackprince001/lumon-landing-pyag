@@ -37,8 +37,7 @@ export default function FAQ() {
           Frequently Asked Questions
         </h2>
         <p className="text-white text-center">
-          Answers to common questions about our financial platform. If you have
-          any other questions, please don't hesitate to contact us.
+          Answers to common questions about Budge AI. If you have any other questions, please don't hesitate to contact us.
         </p>
       </div>
       <div className="max-w-7xl px-6 py-4 sm:py-16 lg:px-8">

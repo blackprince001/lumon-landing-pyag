@@ -30,9 +30,11 @@ export default function App() {
                 <h2 className="text-balance text-4xl font-dmsans font-semibold tracking-tight text-white sm:text-5xl">
                   Ready to Transform Your Financial Future?
                 </h2>
-                <Button className=" h-10 mt-16 rounded-3xl px-8">
-                  Start today for free
-                </Button>
+                <a href="https://tally.so/r/n9pAx1">
+                  <Button className=" h-10 mt-16 rounded-3xl px-8">
+                    Start today for free
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

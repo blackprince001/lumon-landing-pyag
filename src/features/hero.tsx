@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <div className="relative py-24 sm:py-32 lg:pb-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl my-32 text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <div className="z-10 flex min-h-fit my-5 items-center justify-center">
             <div
               className={cn(
@@ -23,7 +23,7 @@ export default function Hero() {
             </div>
           </div>
           <h1 className="text-5xl font-semibold font-dmsans tracking-tight text-balance text-white sm:text-7xl">
-            A <LineShadowText className="italic text-green-700" shadowColor={" #16a34a "}>
+            The <LineShadowText className="italic text-green-700" shadowColor={" #16a34a "}>
               money
             </LineShadowText>
             management app you'll enjoy using
